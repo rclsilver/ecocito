@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  ecocito:
+    image: ecocito
+    build:
+      context: .
+      args:
+        - PIP_ENV=development
+    environment:
+      - ECOCITO_SUBDOMAIN=ccdombes
+      - STATE_FILE=/data/state.json
+      - TZ=Europe/Paris
+    volumes:
+      - ${PWD}/main.py:/code/main.py:ro

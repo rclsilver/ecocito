@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  ecocito:
+    environment:
+      - ECOCITO_USERNAME=<your-email>
+      - ECOCITO_PASSWORD=<your-password>
+      - MQTT_BROKER=localhost
